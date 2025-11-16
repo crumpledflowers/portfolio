@@ -4,10 +4,10 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="text-center space-y-2">
           <p className="text-muted-foreground text-sm font-mono">
-            © {new Date().getFullYear()} [Your Name]. All rights reserved.
+            © {new Date().getFullYear()} Crumpledflowers. All rights reserved.
           </p>
           <p className="text-muted-foreground text-xs">
-            Built with <span className="text-primary">♥</span> using Lovable.dev
+            Built with love <span className="text-primary">♥</span>
           </p>
         </div>
       </div>

@@ -20,10 +20,10 @@ const Contact = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Send, href: "https://t.me", label: "Telegram" },
+    { icon: Github, href: "https://github.com/crumpledflowers", label: "GitHub" },
+    { icon: Twitter, href: "https://twitter.com/r0se_r0sen", label: "Twitter" },
+    { icon: Instagram, href: "https://instagram.com/itzzuk0", label: "Instagram" },
+    { icon: Send, href: "https://t.me/crumpledflowers", label: "Telegram" },
   ];
 
   return (

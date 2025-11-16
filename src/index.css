@@ -2,48 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Pink Terminal Design System — All colors in HSL */
 
 @layer base {
   :root {
     /* Terminal Dark Theme */
-    --background: 0 0% 5%;
-    --foreground: 180 5% 90%;
+    --background: 300 10% 4%;
+    --foreground: 330 15% 92%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 180 5% 90%;
+    --card: 300 10% 7%;
+    --card-foreground: 330 15% 92%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 180 5% 90%;
+    --popover: 300 10% 7%;
+    --popover-foreground: 330 15% 92%;
 
-    --primary: 187 100% 50%;
-    --primary-foreground: 0 0% 5%;
+    /* Primary neon pink */
+    --primary: 320 90% 55%;
+    --primary-foreground: 300 10% 4%;
 
-    --secondary: 187 30% 15%;
-    --secondary-foreground: 180 5% 90%;
+    /* Muted purple-pink */
+    --secondary: 315 25% 20%;
+    --secondary-foreground: 330 15% 92%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 180 5% 60%;
+    --muted: 300 10% 13%;
+    --muted-foreground: 330 10% 65%;
 
-    --accent: 187 100% 50%;
-    --accent-foreground: 0 0% 5%;
+    /* Accent neon fuchsia */
+    --accent: 315 100% 55%;
+    --accent-foreground: 300 10% 4%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 187 100% 50%;
+    --border: 300 10% 18%;
+    --input: 300 10% 18%;
+    --ring: 320 90% 55%;
 
     --radius: 0.5rem;
 
-    /* Custom terminal colors */
-    --terminal-green: 142 71% 45%;
-    --terminal-cyan: 187 100% 50%;
-    --terminal-purple: 271 76% 53%;
-    --glow: 187 100% 50%;
+    /* Custom terminal colors (pink versions) */
+    --terminal-green: 320 85% 65%; /* bright pink replacing green */
+    --terminal-cyan: 300 100% 75%; /* hot pink highlight */
+    --terminal-purple: 290 80% 65%; /* pinkish-violet */
+    --glow: 315 100% 60%; /* neon pink glow */
   }
 }
 

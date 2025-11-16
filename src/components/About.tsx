@@ -8,11 +8,26 @@ const About = () => {
     { name: "Music Production", percentage: 75, color: "bg-terminal-purple" },
   ];
 
+  // Updated to match the screenshot
   const journey = [
-    { year: "2020", event: "Started coding journey" },
-    { year: "2021", event: "First CTF competition" },
-    { year: "2022", event: "Began music production" },
-    { year: "2023", event: "Professional cybersecurity work" },
+    {
+      title: "Started Coding",
+      time: "2 years ago",
+      description:
+        "Began my journey into the world of programming and cybersecurity.",
+    },
+    {
+      title: "First CTF Competition",
+      time: "Joined INSA",
+      description:
+        "Got employed as a penetration tester at the Information Network Security Administration (INSA).",
+    },
+    {
+      title: "Music Production",
+      time: "2 months ago",
+      description:
+        "Started exploring music production as a creative outlet.",
+    },
   ];
 
   return (
@@ -84,23 +99,34 @@ const About = () => {
               ))}
             </div>
           </Card>
+          {/* My Journey Timeline */}
+<Card className="p-8 bg-card/50 backdrop-blur border-primary/20 animate-fade-in">
+  <h3 className="terminal text-2xl font-semibold mb-6 text-primary">My Journey</h3>
 
-          {/* Journey Timeline */}
-          <Card className="p-8 bg-card/50 backdrop-blur border-primary/20 animate-fade-in">
-            <h3 className="terminal text-2xl font-semibold mb-6 text-primary">Journey</h3>
-            <div className="space-y-4">
-              {journey.map((item, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="w-20 shrink-0 terminal text-primary font-semibold">{item.year}</div>
-                  <div className="flex-1 flex items-center gap-4">
-                    <div className="w-3 h-3 rounded-full bg-primary shrink-0" />
-                    <div className="h-px bg-border flex-1" />
-                    <span className="text-foreground">{item.event}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Card>
+  <div className="relative ml-6">
+    {/* Vertical Line */}
+    <div className="absolute left-0 top-0 bottom-0 w-px bg-primary/40"></div>
+
+    <div className="space-y-12 pl-8">
+      {journey.map((item, index) => (
+        <div key={index} className="relative">
+          {/* Dot */}
+          <div className="absolute -left-4 top-1 w-4 h-4 bg-primary rounded-full"></div>
+
+          {/* Content */}
+          <h4 className="terminal text-xl font-semibold text-foreground">
+            {item.title}
+          </h4>
+          <p className="text-muted-foreground text-sm">{item.time}</p>
+          <p className="text-foreground/90 mt-2">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Card>
+
+
+
         </div>
       </div>
     </section>
