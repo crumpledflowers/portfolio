@@ -6,34 +6,39 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
+      title: "Gamma-client",
+      description:
+        "A lightweight Electron client for Kirka.io with performance tweaks and custom features.",
+      tags: ["Electron", "JavaScript", "Game Modding"],
+      github: "https://github.com/crumpledflowers/Gamma-client",
+      download: "https://github.com/crumpledflowers/Gamma-client/releases",
+      status: "Completed",
+    },
+    {
+      title: "Network Scanner Tool",
+      description:
+        "Advanced network scanning tool with vulnerability detection and automated reporting features.",
+      tags: ["Python", "Nmap", "Scapy"],
+      github: "#",
+      status: "Completed",
+    },
+    {
       title: "CTF Challenge Platform",
-      description: "A web-based platform for hosting and solving Capture The Flag challenges with real-time scoring.",
+      description:
+        "A web-based platform for hosting and solving Capture The Flag challenges with real-time scoring.",
       tags: ["React", "Node.js", "MongoDB", "Docker"],
       github: "#",
       live: "#",
       status: "Ongoing",
     },
     {
-      title: "Network Scanner Tool",
-      description: "Advanced network scanning tool with vulnerability detection and automated reporting features.",
-      tags: ["Python", "Nmap", "Scapy"],
-      github: "#",
-      status: "Completed",
-    },
-    {
       title: "Music Visualizer",
-      description: "Real-time audio visualizer with customizable effects and recording capabilities.",
+      description:
+        "Real-time audio visualizer with customizable effects and recording capabilities.",
       tags: ["JavaScript", "Web Audio API", "Canvas"],
       github: "#",
       live: "#",
       status: "Ongoing",
-    },
-    {
-      title: "Secure Chat Application",
-      description: "End-to-end encrypted chat application with self-destructing messages.",
-      tags: ["TypeScript", "WebRTC", "Cryptography"],
-      github: "#",
-      status: "Contribution",
     },
   ];
 
@@ -46,7 +51,9 @@ const Projects = () => {
             <h2 className="terminal text-4xl md:text-5xl font-bold text-foreground">
               <span className="text-primary">$</span> ls projects/
             </h2>
-            <p className="text-muted-foreground text-lg">Things I've built and contributed to</p>
+            <p className="text-muted-foreground text-lg">
+              Things I've built and contributed to
+            </p>
           </div>
 
           {/* Projects Grid */}
@@ -77,7 +84,11 @@ const Projects = () => {
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="outline" className="text-xs border-primary/20">
+                      <Badge
+                        key={tag}
+                        variant="outline"
+                        className="text-xs border-primary/20"
+                      >
                         {tag}
                       </Badge>
                     ))}
@@ -87,17 +98,39 @@ const Projects = () => {
                   <div className="flex gap-3 pt-2">
                     {project.github && (
                       <Button variant="terminal" size="sm" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <Github className="w-4 h-4 mr-2" />
                           Code
                         </a>
                       </Button>
                     )}
+
                     {project.live && (
                       <Button variant="outline" size="sm" asChild>
-                        <a href={project.live} target="_blank" rel="noopener noreferrer">
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <ExternalLink className="w-4 h-4 mr-2" />
                           Live Demo
+                        </a>
+                      </Button>
+                    )}
+
+                    {project.download && (
+                      <Button variant="outline" size="sm" asChild>
+                        <a
+                          href={project.download}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Download
                         </a>
                       </Button>
                     )}
